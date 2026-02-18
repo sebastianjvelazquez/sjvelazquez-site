@@ -10,6 +10,45 @@
   --accent-glow: rgba(0,229,255,0.15);
 }
 
+/* Light Mode */
+[data-theme="light"] {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface2: #eef1f5;
+  --border: #d1d9e0;
+  --cyan: #0088cc;
+  --green: #00a86b;
+  --white: #1a1a2e;
+  --muted: #5a6a7a;
+  --accent-glow: rgba(0,136,204,0.15);
+}
+
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(0,136,204,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,136,204,0.05) 1px, transparent 1px);
+}
+
+[data-theme="light"] nav.scrolled {
+  background: rgba(255,255,255,0.9);
+}
+
+[data-theme="light"] .hero-name .line2 {
+  -webkit-text-stroke: 1px rgba(0,136,204,0.5);
+}
+
+[data-theme="light"] .terminal {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+[data-theme="light"] .cursor {
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .timeline-body::before {
+  background: var(--surface);
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -77,6 +116,32 @@ nav.scrolled {
   color: var(--cyan);
   text-decoration: none;
   letter-spacing: 0.05em;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1.5rem;
+}
+.theme-toggle:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+.theme-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover .theme-icon {
+  transform: rotate(20deg);
 }
 .nav-logo span { color: var(--muted); }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -604,13 +669,17 @@ footer {
     gap: 1rem;
     border-bottom: 1px solid var(--border);
   }
+  [data-theme="light"] .nav-links {
+    background: rgba(255,255,255,0.95);
+  }
   .nav-links.active { display: flex; }
   .menu-toggle { display: flex; }
+  .theme-toggle { margin-left: auto; margin-right: 1rem; }
   #hero { padding: 7rem 1.5rem 3rem; }
   .hero-stats { flex-wrap: wrap; gap: 2rem; }
   .timeline-item { grid-template-columns: 1fr; }
   .timeline-item::before { display: none; }
-  .timeline-date { text-align: left; }
+  .timeline-date { text-align: left; margin-bottom: 0.5rem; }
   .timeline-body { padding-left: 1.5rem; }
   #about, #experience, #contact { padding: 4rem 1.5rem; }
   #skills, #projects { padding: 4rem 1.5rem; }
