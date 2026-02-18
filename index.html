@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SJ Velazquez — Cybersecurity Engineer</title>
+  <meta name="description" content="Sebastian Velazquez - Cybersecurity Engineering & Architecture Intern. Protecting systems, people, and data through thoughtful design and practical defense." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">SJV<span>.exe</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+  <div class="hero-content">
+    <div class="hero-tag">● Available for Opportunities · FSU '26</div>
+    <h1 class="hero-name">
+      Sebastian<br>
+      <span class="line2">Velazquez</span>
+    </h1>
+    <p class="hero-tagline">
+      Cybersecurity Engineering & Architecture Intern.<br>
+      Protecting systems, people, and data through<br>
+      thoughtful design and practical defense.
+    </p>
+    <div class="hero-ctas">
+      <a href="resume.pdf" class="btn btn-primary" target="_blank">↓ Download Resume</a>
+      <a href="https://www.linkedin.com/in/sebastianjvelazquez/" class="btn btn-secondary" target="_blank">LinkedIn →</a>
+      <a href="#contact" class="btn btn-secondary">Get in Touch →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">IAM</div>
+        <div class="stat-label">Core Specialty</div>
+      </div>
+      <div>
+        <div class="stat-num">NIST</div>
+        <div class="stat-label">CSF · ISO 27001</div>
+      </div>
+      <div>
+        <div class="stat-num">FSU</div>
+        <div class="stat-label">Cybersecurity Club</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">// whoami</div>
+  <h2 class="section-title reveal">About Me</h2>
+  <div class="terminal reveal">
+    <div class="terminal-bar">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+      <span class="terminal-title">sjv@portfolio ~ bash</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">$ </span><span class="t-cmd">cat</span> about.json</div>
+      <div style="margin-top:1rem">{</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"name"</span>: <span class="t-string">"Sebastian J. Velazquez"</span>,</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"role"</span>: <span class="t-string">"Cybersecurity Engineering & Architecture Intern"</span>,</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"university"</span>: <span class="t-string">"Florida State University (FSU)"</span>,</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"specializations"</span>: [</div>
+      <div style="padding-left:3rem"><span class="t-string">"Identity & Access Management"</span>,</div>
+      <div style="padding-left:3rem"><span class="t-string">"Privileged Access Management"</span>,</div>
+      <div style="padding-left:3rem"><span class="t-string">"Vulnerability Management"</span>,</div>
+      <div style="padding-left:3rem"><span class="t-string">"Cloud Compliance"</span></div>
+      <div style="padding-left:1.5rem">],</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"frameworks"</span>: [<span class="t-string">"NIST CSF"</span>, <span class="t-string">"ISO 27001"</span>, <span class="t-string">"CMMC"</span>],</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"clubs"</span>: [<span class="t-string">"Cybersecurity Club"</span>, <span class="t-string">"ACM"</span>, <span class="t-string">"ColorStack FSU (co-founder)"</span>],</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"values"</span>: [<span class="t-string">"integrity"</span>, <span class="t-string">"accountability"</span>, <span class="t-string">"curiosity"</span>],</div>
+      <div style="padding-left:1.5rem"><span class="t-key">"goal"</span>: <span class="t-string">"Security Architect — balancing innovation with protection"</span></div>
+      <div>}</div>
+      <div style="margin-top:1rem"><span class="t-comment"># Mission: strengthen access controls, improve audit readiness,</span></div>
+      <div><span class="t-comment"># and design secure, scalable infrastructure that builds trust.</span></div>
+      <div style="margin-top:0.5rem"><span class="t-prompt">$ </span><span style="border-right: 2px solid var(--cyan); animation: blink 1s infinite; padding-right:1px"> </span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="skills-inner">
+    <div class="section-label">// capabilities</div>
+    <h2 class="section-title reveal">Skills & Tools</h2>
+    <div class="skills-categories">
+      <div class="reveal">
+        <div class="skills-cat-title">// Security & Compliance</div>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">🔐</span><div class="skill-name">IAM</div></div>
+          <div class="skill-card"><span class="skill-icon">🛡️</span><div class="skill-name">PAM</div></div>
+          <div class="skill-card"><span class="skill-icon">🔍</span><div class="skill-name">Vuln. Mgmt</div></div>
+          <div class="skill-card"><span class="skill-icon">📋</span><div class="skill-name">NIST CSF</div></div>
+          <div class="skill-card"><span class="skill-icon">🏛️</span><div class="skill-name">ISO 27001</div></div>
+          <div class="skill-card"><span class="skill-icon">⚔️</span><div class="skill-name">CMMC</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skills-cat-title">// Cloud & Infrastructure</div>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">☁️</span><div class="skill-name">AWS</div></div>
+          <div class="skill-card"><span class="skill-icon">🔷</span><div class="skill-name">Azure</div></div>
+          <div class="skill-card"><span class="skill-icon">🐳</span><div class="skill-name">Docker</div></div>
+          <div class="skill-card"><span class="skill-icon">🐧</span><div class="skill-name">Linux</div></div>
+          <div class="skill-card"><span class="skill-icon">🔑</span><div class="skill-name">Zero Trust</div></div>
+          <div class="skill-card"><span class="skill-icon">📊</span><div class="skill-name">SIEM</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skills-cat-title">// Development</div>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">🐍</span><div class="skill-name">Python</div></div>
+          <div class="skill-card"><span class="skill-icon">☕</span><div class="skill-name">Java</div></div>
+          <div class="skill-card"><span class="skill-icon">🌐</span><div class="skill-name">JavaScript</div></div>
+          <div class="skill-card"><span class="skill-icon">🗄️</span><div class="skill-name">SQL</div></div>
+          <div class="skill-card"><span class="skill-icon">🔧</span><div class="skill-name">Bash</div></div>
+          <div class="skill-card"><span class="skill-icon">🔁</span><div class="skill-name">Git</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">// career</div>
+  <h2 class="section-title reveal">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2025 – Present<br>Full-time</div>
+      <div class="timeline-body">
+        <div class="timeline-role">Cybersecurity Engineering & Architecture Intern</div>
+        <div class="timeline-company">// Current Role</div>
+        <div class="timeline-desc">Focused on identity and access management, cloud compliance, and audit readiness. Designing secure, scalable access control frameworks aligned with NIST CSF and ISO 27001 standards.</div>
+        <div class="timeline-tags">
+          <span class="tag">IAM</span><span class="tag">PAM</span><span class="tag">Cloud Security</span><span class="tag">NIST</span><span class="tag">ISO 27001</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2023 – Present<br>Leadership</div>
+      <div class="timeline-body">
+        <div class="timeline-role">Co-Founder — ColorStack FSU</div>
+        <div class="timeline-company">// Florida State University</div>
+        <div class="timeline-desc">Co-founded the FSU chapter of ColorStack to support diversity in computing. Building community and professional development resources for underrepresented students in tech.</div>
+        <div class="timeline-tags">
+          <span class="tag">Leadership</span><span class="tag">Community</span><span class="tag">DEI in Tech</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">Ongoing<br>Student</div>
+      <div class="timeline-body">
+        <div class="timeline-role">Member — Cybersecurity Club & ACM</div>
+        <div class="timeline-company">// Florida State University</div>
+        <div class="timeline-desc">Active participant in CTF competitions, security workshops, and collaborative research. Engaged with industry professionals and cutting-edge security research at FSU.</div>
+        <div class="timeline-tags">
+          <span class="tag">CTF</span><span class="tag">Security Research</span><span class="tag">Networking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="projects-inner">
+    <div class="section-label">// portfolio</div>
+    <h2 class="section-title reveal">Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <span class="project-icon">🔐</span>
+        <div class="project-title">IAM Architecture Design</div>
+        <div class="project-desc">Designed and documented an identity and access management framework for a multi-cloud environment, incorporating least-privilege principles and zero-trust architecture.</div>
+        <div class="timeline-tags" style="margin-bottom:1rem">
+          <span class="tag">IAM</span><span class="tag">Zero Trust</span><span class="tag">AWS</span>
+        </div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+      <div class="project-card reveal">
+        <span class="project-icon">🛡️</span>
+        <div class="project-title">Vulnerability Management Pipeline</div>
+        <div class="project-desc">Built an automated vulnerability scanning and remediation tracking pipeline using Python and open-source tools, reducing time-to-remediation by prioritizing critical CVEs.</div>
+        <div class="timeline-tags" style="margin-bottom:1rem">
+          <span class="tag">Python</span><span class="tag">CVE</span><span class="tag">Automation</span>
+        </div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+      <div class="project-card reveal">
+        <span class="project-icon">☁️</span>
+        <div class="project-title">Cloud Compliance Audit Tool</div>
+        <div class="project-desc">Developed scripts to assess cloud infrastructure against NIST CSF controls and generate compliance reports, supporting audit readiness for a mid-size organization.</div>
+        <div class="timeline-tags" style="margin-bottom:1rem">
+          <span class="tag">NIST CSF</span><span class="tag">Azure</span><span class="tag">Python</span>
+        </div>
+        <a href="#" class="project-link">View Details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center; margin-bottom: 1.5rem">// connect</div>
+  <h2 class="contact-headline reveal">
+    Let's Build Something<br><span class="accent">Secure.</span>
+  </h2>
+  <p class="contact-sub reveal">
+    Open to internships, full-time roles, and collaboration on cybersecurity projects. Let's talk.
+  </p>
+  <div class="contact-links reveal">
+    <a href="mailto:contact@sjvelazquez.com" class="btn btn-primary">✉ Send an Email</a>
+    <a href="https://www.linkedin.com/in/sebastianjvelazquez/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+    <a href="resume.pdf" class="btn btn-secondary" target="_blank">Resume PDF</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SJV.exe — Sebastian Velazquez</div>
+  <div class="footer-copy">© 2026 · Cybersecurity · FSU · All rights reserved.</div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>
