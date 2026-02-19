@@ -850,9 +850,8 @@ footer {
   #hero { padding: 7rem 1.5rem 3rem; }
   .scroll-indicator { display: none; }
   .hero-name { 
-    font-size: clamp(2.2rem, 11vw, 3.5rem); 
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    font-size: clamp(2rem, 10vw, 3.5rem); 
+    white-space: nowrap;
   }
   .hero-badges { gap: 0.5rem; }
   .hero-badge { font-size: 0.68rem; padding: 0.4rem 0.8rem; }
