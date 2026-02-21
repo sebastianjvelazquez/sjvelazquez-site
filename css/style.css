@@ -30,7 +30,9 @@
 }
 
 [data-theme="light"] nav.scrolled {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 [data-theme="light"] .hero-name .line2 {
@@ -209,9 +211,10 @@ nav {
   backdrop-filter: blur(0px);
 }
 nav.scrolled {
-  background: rgba(8,12,16,0.85);
+  background: rgba(8,12,16,0.6);
   border-color: var(--border);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .nav-logo {
   font-family: 'Space Mono', monospace;
@@ -581,9 +584,9 @@ nav.scrolled {
 }
 .skill-card:hover {
   border-color: var(--cyan);
-  background: rgba(0,229,255,0.05);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,229,255,0.1);
+  background: rgba(0,229,255,0.08);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,229,255,0.15), 0 0 15px rgba(0,229,255,0.1);
 }
 .skill-icon {
   font-size: 1.8rem;
@@ -732,9 +735,9 @@ nav.scrolled {
 }
 .project-card:hover::before { transform: scaleX(1); }
 .project-card:hover {
-  border-color: rgba(0,229,255,0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border-color: rgba(0,229,255,0.5);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 20px rgba(0,229,255,0.15);
 }
 .project-icon {
   font-size: 2rem; margin-bottom: 1rem; display: block;
@@ -798,6 +801,85 @@ footer {
   font-family: 'Space Mono', monospace;
   font-size: 0.8rem;
   color: var(--muted);
+}
+.footer-copy {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Scroll Progress Component */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--cyan);
+  width: 0%;
+  z-index: 1000;
+  box-shadow: 0 0 10px var(--cyan);
+  transition: width 0.1s ease-out;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  /* Header & Nav */
+  nav { padding: 1rem 1.5rem; justify-content: flex-start; }
+  .nav-logo { font-size: 0.85rem; order: 1; margin-right: auto; }
+  .theme-toggle { margin-left: 0; margin-right: 1.5rem; order: 2; width: 35px; height: 35px; }
+  .menu-toggle { display: flex; order: 3; }
+  
+  #navLinks {
+    position: fixed;
+    top: 70px; right: -100%;
+    width: 250px; height: calc(100vh - 70px);
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.4s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  #navLinks.active { right: 0; }
+  
+  /* Hero */
+  #hero { padding: 6rem 1.5rem 3rem; }
+  .hero-name { font-size: clamp(2.5rem, 12vw, 3.5rem); }
+  .rotating-text { font-size: 1.1rem; height: auto; min-height: 1.5em; }
+  .rotating-words { overflow: hidden; height: 1.5em; display: inline-flex; flex-direction: column; }
+  .hero-ctas { flex-direction: column; align-items: stretch; width: 100%; }
+  .btn { text-align: center; justify-content: center; width: 100%; }
+  .hero-tagline { font-size: 0.85rem; }
+
+  /* Sections */
+  #about, #skills, #experience, #education, #projects, #contact {
+    padding: 4rem 1.5rem;
+  }
+  
+  /* Terminal Wrap */
+  .terminal-body {
+    padding: 1.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  .terminal-body div {
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+  }
+  
+  /* Experience Layout */
+  .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .timeline-item::before { display: none; }
+  .timeline-date { text-align: left; padding: 0; margin-bottom: 0.5rem; color: var(--cyan); }
+  .timeline-body { padding-left: 1.25rem; border-left: 1px solid var(--border); }
+  .timeline-body::before { left: -6px; top: 2px; }
+  
+  /* Contact Headings */
+  .contact-headline { font-size: 2.2rem; }
+  
+  /* Footer Mobile */
+  footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
 }
 .footer-copy {
   font-family: 'Space Mono', monospace;

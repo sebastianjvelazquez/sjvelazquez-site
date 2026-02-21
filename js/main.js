@@ -1,7 +1,20 @@
-// Sticky nav
+// Sticky nav & Scroll Progress
 const navbar = document.getElementById('navbar');
+const scrollProgress = document.getElementById('scrollProgress');
+
 window.addEventListener('scroll', () => {
+  // Sticky Nav
   navbar.classList.toggle('scrolled', window.scrollY > 50);
+  
+  // Scroll Progress
+  if (scrollProgress) {
+    const totalScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (windowHeight > 0) {
+      const scrollPercent = (totalScroll / windowHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    }
+  }
 });
 
 // Mobile menu toggle
