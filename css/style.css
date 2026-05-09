@@ -149,13 +149,15 @@
 }
 
 #hero .btn-secondary {
-  color: #334155;
-  border-color: #cbd5e1;
+  color: #1e293b;
+  border-color: #64748b;
+  background: rgba(100, 116, 139, 0.08);
 }
 
 #hero .btn-secondary:hover {
   border-color: #0088cc;
   color: #0088cc;
+  background: rgba(0, 136, 204, 0.08);
 }
 
 #hero .hero-bg-orb.orb1 {
@@ -581,6 +583,10 @@ nav.scrolled {
   animation: fadeUp 0.8s 0.8s forwards;
 }
 
+.hero-ctas .btn {
+  flex: 0 0 auto;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -818,7 +824,6 @@ nav.scrolled {
   padding: 6rem 3rem;
   background: var(--surface);
   border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .skills-inner {
@@ -896,6 +901,15 @@ nav.scrolled {
 
 /* EDUCATION */
 #education {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 3rem 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* LEADERSHIP & INVOLVEMENT */
+#leadership {
   position: relative;
   z-index: 1;
   padding: 2rem 3rem 6rem;
@@ -1000,7 +1014,6 @@ nav.scrolled {
   z-index: 1;
   padding: 6rem 3rem;
   background: var(--surface);
-  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
@@ -1122,6 +1135,29 @@ nav.scrolled {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+#contact .btn-secondary {
+  color: #1e293b;
+  border-color: #64748b;
+  background: rgba(100, 116, 139, 0.08);
+}
+
+#contact .btn-secondary:hover {
+  border-color: #0088cc;
+  color: #0088cc;
+  background: rgba(0, 136, 204, 0.08);
+}
+
+[data-theme="dark"] #contact .btn-secondary {
+  color: var(--white);
+  border-color: var(--border);
+  background: transparent;
+}
+
+[data-theme="dark"] #contact .btn-secondary:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
 }
 
 /* FOOTER */
@@ -1264,6 +1300,7 @@ footer {
   #skills,
   #experience,
   #education,
+  #leadership,
   #projects,
   #contact {
     padding: 4rem 1.5rem;
