@@ -932,7 +932,7 @@ nav.scrolled {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: calc(160px + 1.5rem - 5px);
+  left: calc(160px + 1.5rem);
   top: 10px;
   bottom: -3rem;
   width: 1px;
